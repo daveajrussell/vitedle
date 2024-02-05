@@ -12,180 +12,276 @@ test("renders Game", () => {
     Get a new word
   </button>,
   <div
-    aria-label="game-board"
     id="board"
   >
     <span
-      aria-label="game-row"
+      aria-label="Game row"
     >
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={false}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={false}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={false}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={false}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={false}
         maxLength={1}
+        onKeyDown={[Function]}
+        type="text"
+      />
+      <button
+        aria-label="Check row"
+        disabled={true}
+        onClick={[Function]}
+      >
+        Check
+      </button>
+    </span>
+    <span
+      aria-label="Game row"
+    >
+      <input
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
+        maxLength={1}
+        onKeyDown={[Function]}
+        type="text"
+      />
+      <input
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
+        maxLength={1}
+        onKeyDown={[Function]}
+        type="text"
+      />
+      <input
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
+        maxLength={1}
+        onKeyDown={[Function]}
+        type="text"
+      />
+      <input
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
+        maxLength={1}
+        onKeyDown={[Function]}
+        type="text"
+      />
+      <input
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
+        maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
     </span>
     <span
-      aria-label="game-row"
+      aria-label="Game row"
     >
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
     </span>
     <span
-      aria-label="game-row"
+      aria-label="Game row"
     >
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
     </span>
     <span
-      aria-label="game-row"
+      aria-label="Game row"
     >
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
     </span>
     <span
-      aria-label="game-row"
+      aria-label="Game row"
     >
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
       <input
-        aria-label="game-tile"
+        aria-label="Game tile"
+        defaultValue=""
+        disabled={true}
         maxLength={1}
-        type="text"
-      />
-    </span>
-    <span
-      aria-label="game-row"
-    >
-      <input
-        aria-label="game-tile"
-        maxLength={1}
-        type="text"
-      />
-      <input
-        aria-label="game-tile"
-        maxLength={1}
-        type="text"
-      />
-      <input
-        aria-label="game-tile"
-        maxLength={1}
-        type="text"
-      />
-      <input
-        aria-label="game-tile"
-        maxLength={1}
-        type="text"
-      />
-      <input
-        aria-label="game-tile"
-        maxLength={1}
+        onKeyDown={[Function]}
         type="text"
       />
     </span>

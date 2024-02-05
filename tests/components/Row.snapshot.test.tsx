@@ -1,37 +1,37 @@
 import renderer from "react-test-renderer";
 import Row from "../../src/components/Row";
+import { GameRow } from "../../src/components/Game";
 
 test("renders Row", () => {
-  const tree = renderer.create(<Row wordLength={5} />).toJSON();
+  const row = {
+      index: 0,
+      disabled: false,
+      value: "",
+      tiles: [{ index: 0, value: "A", disabled: false }],
+    } as GameRow,
+    onRowCheck = jest.fn();
+  const tree = renderer
+    .create(<Row row={row} onRowCheck={onRowCheck} />)
+    .toJSON();
   expect(tree).toMatchInlineSnapshot(`
 <span
-  aria-label="game-row"
+  aria-label="Game row"
 >
   <input
-    aria-label="game-tile"
+    aria-label="Game tile"
+    defaultValue="A"
+    disabled={false}
     maxLength={1}
+    onKeyDown={[Function]}
     type="text"
   />
-  <input
-    aria-label="game-tile"
-    maxLength={1}
-    type="text"
-  />
-  <input
-    aria-label="game-tile"
-    maxLength={1}
-    type="text"
-  />
-  <input
-    aria-label="game-tile"
-    maxLength={1}
-    type="text"
-  />
-  <input
-    aria-label="game-tile"
-    maxLength={1}
-    type="text"
-  />
+  <button
+    aria-label="Check row"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Check
+  </button>
 </span>
 `);
 });

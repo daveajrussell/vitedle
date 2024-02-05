@@ -1,5 +1,7 @@
+import { useState } from "react";
 import "./Board.css";
 import Row from "./Row";
+import { GameRow, RowTile } from "./Game";
 
 interface BoardComponentProps {
   guesses: number;
@@ -7,10 +9,45 @@ interface BoardComponentProps {
 }
 
 const Board = ({ guesses, wordLength }: BoardComponentProps) => {
+  const initialRows = Array.from({ length: guesses }).map((_, i) => {
+    const disabled = i > 0;
+    return {
+      index: i,
+      disabled: disabled,
+      tiles: Array.from({ length: wordLength }).map((_, j) => {
+        return {
+          index: j,
+          disabled: disabled,
+          value: "",
+        } as RowTile;
+      }),
+    } as GameRow;
+  });
+
+  const [rows, setRows] = useState(initialRows);
+
+  const checkRow = (updatedRow: GameRow) => {
+    setRows(
+      rows.map((row) => {
+        if (row.index === updatedRow.index) {
+          row.value = updatedRow.value;
+          row.disabled = true;
+          row.tiles.forEach((t) => (t.disabled = true));
+        } else if (row.index === updatedRow.index + 1) {
+          row.disabled = false;
+          row.tiles.forEach((t) => (t.disabled = false));
+        }
+        return row;
+      })
+    );
+  };
+
   return (
-    <div id="board" aria-label="game-board">
-      {Array.from({ length: guesses }).map((_, i) => {
-        return <Row key={i} wordLength={wordLength} />;
+    <div id="board">
+      {rows.map((row) => {
+        return (
+          <Row key={`game-row-${row.index}`} row={row} onRowCheck={checkRow} />
+        );
       })}
     </div>
   );
