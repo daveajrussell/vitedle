@@ -4,4 +4,13 @@ input {
   max-width: 32px;
   max-height: 32px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: green;
+}
+
+.partially-correct {
+  background-color: olive;
 }

@@ -11,14 +11,15 @@ test("renders Row", () => {
     } as GameRow,
     onRowCheck = jest.fn();
   const tree = renderer
-    .create(<Row row={row} onRowCheck={onRowCheck} />)
+    .create(<Row word="dummy" row={row} onRowCheck={onRowCheck} />)
     .toJSON();
   expect(tree).toMatchInlineSnapshot(`
 <span
-  aria-label="Game row"
+  aria-label="Game row 0"
 >
   <input
-    aria-label="Game tile"
+    aria-label="Game tile at position 0 not guessed"
+    className=""
     defaultValue="A"
     disabled={false}
     maxLength={1}
@@ -26,7 +27,7 @@ test("renders Row", () => {
     type="text"
   />
   <button
-    aria-label="Check row"
+    aria-label="Check row 0"
     disabled={false}
     onClick={[Function]}
   >

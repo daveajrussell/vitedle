@@ -18,8 +18,10 @@ describe("Row", () => {
     onRowCheck = jest.fn();
 
   it("renders Row component", async () => {
-    render(<Row row={row} onRowCheck={onRowCheck} />);
-    const input = screen.getAllByLabelText("Game tile");
+    render(<Row word="dummy" row={row} onRowCheck={onRowCheck} />);
+    const input = screen.getAllByLabelText("Game tile", { exact: false });
     expect(input.length).toEqual(5);
   });
+
+  // TODO - Unit test for Check button appearing only when all tiles are filled
 });

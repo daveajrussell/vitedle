@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <RandomWordProvider>
-        <Game></Game>
+        <Game guesses={2} wordLength={5}></Game>
       </RandomWordProvider>
     </>
   );

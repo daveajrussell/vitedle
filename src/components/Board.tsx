@@ -4,11 +4,13 @@ import Row from "./Row";
 import { GameRow, RowTile } from "./Game";
 
 interface BoardComponentProps {
+  word: string;
   guesses: number;
   wordLength: number;
+  onRowComplete(updatedRow: GameRow): void;
 }
 
-const Board = ({ guesses, wordLength }: BoardComponentProps) => {
+const Board = ({ word, guesses, wordLength, onRowComplete }: BoardComponentProps) => {
   const initialRows = Array.from({ length: guesses }).map((_, i) => {
     const disabled = i > 0;
     return {
@@ -40,13 +42,15 @@ const Board = ({ guesses, wordLength }: BoardComponentProps) => {
         return row;
       })
     );
+
+    onRowComplete(updatedRow);
   };
 
   return (
     <div id="board">
       {rows.map((row) => {
         return (
-          <Row key={`game-row-${row.index}`} row={row} onRowCheck={checkRow} />
+          <Row key={`game-row-${row.index}`} row={row} onRowCheck={checkRow} word={word} />
         );
       })}
     </div>

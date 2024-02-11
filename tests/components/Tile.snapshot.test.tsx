@@ -14,7 +14,8 @@ test("renders Tile", () => {
     .toJSON();
   expect(tree).toMatchInlineSnapshot(`
 <input
-  aria-label="Game tile"
+  aria-label="Game tile at position 0 not guessed"
+  className=""
   defaultValue="A"
   disabled={false}
   maxLength={1}
