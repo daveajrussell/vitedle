@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tile from "./Tile";
 import { GameRow, RowTile } from "./Game";
 
@@ -9,21 +9,20 @@ interface RowComponentProps {
 }
 
 const Row = ({ row, onRowCheck, word }: RowComponentProps) => {
-  let checkButtonEnabled: boolean = true;
-  let checkButtonVisible: boolean = false;
-
-  const checkButtonVisibility = () => {
-    checkButtonVisible = tiles.some((t) => !t.disabled);
-    checkButtonEnabled = tiles.every((t) => !!t.value);
-  };
-
+  const [checkButtonVisible, setCheckButtonVisible] = useState(false);
+  const [checkButtonEnabled, setCheckButtonEnabled] = useState(false);
   const [tiles, setTiles] = useState(row.tiles);
 
   const letters = [...word].map((value, index) => {
     return { index: index, value: value, guessed: false };
   });
 
-  const onTileKeyDown = (e: RowTile) => {
+  const checkButtonVisibility = () => {
+    setCheckButtonVisible(tiles.some((t) => !t.disabled));
+    setCheckButtonEnabled(tiles.every((t) => !!t.value));
+  };
+
+  const onTileChange = (e: RowTile) => {
     setTiles(
       tiles.map((tile) => {
         if (tile.index === e.index) {
@@ -61,7 +60,7 @@ const Row = ({ row, onRowCheck, word }: RowComponentProps) => {
     });
   };
 
-  checkButtonVisibility();
+  useEffect(() => checkButtonVisibility(), [row.disabled]);
 
   return (
     <span aria-label={`Game row ${row.index}`}>
@@ -70,7 +69,7 @@ const Row = ({ row, onRowCheck, word }: RowComponentProps) => {
           <Tile
             key={`game-tile-${tile.index}-row-${row.index}`}
             tile={tile}
-            onKeyDown={onTileKeyDown}
+            onChange={onTileChange}
           />
         );
       })}
@@ -78,7 +77,8 @@ const Row = ({ row, onRowCheck, word }: RowComponentProps) => {
         <button
           aria-label={`Check row ${row.index}`}
           disabled={!checkButtonEnabled}
-          onClick={checkRow}
+          aria-disabled={!checkButtonEnabled}
+          onClick={() => checkButtonEnabled && checkRow()}
         >
           Check
         </button>

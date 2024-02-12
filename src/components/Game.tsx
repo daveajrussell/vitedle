@@ -21,9 +21,10 @@ export interface RowTile {
 interface GameProps {
   wordLength: number;
   guesses: number;
+  words?: string[];
 }
 
-const Game = ({ wordLength, guesses }: GameProps) => {
+const Game = ({ wordLength, guesses, words }: GameProps) => {
   const [word, setWord] = useState("");
   const randomWordService = useContext(RandomWordContext);
   const [game, setGame] = useState({
@@ -37,7 +38,7 @@ const Game = ({ wordLength, guesses }: GameProps) => {
   }, []);
 
   const fetchNewWord = async () => {
-    const word = await randomWordService.getRandomWordAsync();
+    const word = await randomWordService.getRandomWordAsync(words);
     setWord(word);
     setGame({
       inProgress: true,
@@ -84,7 +85,9 @@ const Game = ({ wordLength, guesses }: GameProps) => {
           ? `${word} guessed correctly after ${game.currentRow + 1} guesses!`
           : `${word} not correctly guessed!`}
       </h1>
-      <button onClick={() => fetchNewWord()}>Get a new word</button>
+      <button aria-label="Get a new word" onClick={fetchNewWord}>
+        Get a new word
+      </button>
     </>
   );
 };

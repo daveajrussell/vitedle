@@ -1,5 +1,5 @@
 import renderer from "react-test-renderer";
-import Game from "../../src/components/Game";
+import Game from "../Game";
 
 test("renders Game", () => {
   const tree = renderer.create(<Game guesses={6} wordLength={5} />).toJSON();
@@ -17,55 +17,53 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={false}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={false}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={false}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={false}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={false}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
-      <button
-        aria-label="Check row 0"
-        disabled={true}
-        onClick={[Function]}
-      >
-        Check
-      </button>
     </span>
     <span
       aria-label="Game row 1"
@@ -73,47 +71,52 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
     </span>
     <span
@@ -122,47 +125,52 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
     </span>
     <span
@@ -171,47 +179,52 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
     </span>
     <span
@@ -220,47 +233,52 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
     </span>
     <span
@@ -269,47 +287,52 @@ test("renders Game", () => {
       <input
         aria-label="Game tile at position 0 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 1 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 2 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 3 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
       <input
         aria-label="Game tile at position 4 not guessed"
         className=""
-        defaultValue=""
         disabled={true}
         maxLength={1}
+        onChange={[Function]}
         onKeyDown={[Function]}
         type="text"
+        value=""
       />
     </span>
   </div>,

@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
-import Row from "../../src/components/Row";
-import { GameRow } from "../../src/components/Game";
+import Row from "../Row";
+import { GameRow } from "../Game";
 
 test("renders Row", () => {
   const row = {
@@ -20,19 +20,13 @@ test("renders Row", () => {
   <input
     aria-label="Game tile at position 0 not guessed"
     className=""
-    defaultValue="A"
     disabled={false}
     maxLength={1}
+    onChange={[Function]}
     onKeyDown={[Function]}
     type="text"
+    value="A"
   />
-  <button
-    aria-label="Check row 0"
-    disabled={false}
-    onClick={[Function]}
-  >
-    Check
-  </button>
 </span>
 `);
 });
